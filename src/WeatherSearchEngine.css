@@ -62,3 +62,34 @@
   flex-direction: row;
   align-items: center;
 }
+@media (max-width: 768px) {
+  .WeatherSearchEngine {
+    padding: 15px;
+  }
+  .WeatherSearchEngine .formSearch {
+    width: 70%;
+    margin-right: 5px;
+  }
+  .WeatherSearchEngine .formSubmit {
+    width: 25%;
+  }
+  .WeatherSearchEngine h3 {
+    font-size: 28px;
+    text-align: center;
+  }
+  .WeatherSearchEngine li {
+    font-size: 14px;
+  }
+  .WeatherSearchEngine span.temperature {
+    font-size: 40px;
+    line-height: 40px;
+  }
+  .WeatherSearchEngine span.temperature small {
+    font-size: 16px;
+    position: relative;
+    top: -18px;
+  }
+  .WeatherSearchEngine img.mainImage {
+    height: 40px;
+  }
+}

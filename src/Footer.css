@@ -10,3 +10,8 @@
 .Footer a:hover {
   color: #a70469;
 }
+@media (max-width: 768px) {
+  .Footer {
+    font-size: 12px;
+  }
+}
