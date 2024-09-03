@@ -9,6 +9,7 @@ export default function WeatherSearchEngine() {
           type="search"
           placeholder="Enter a city..."
           className="formSearch"
+          autoFocus="on"
         />
         <input type="submit" value="Search" className="formSubmit" />
       </form>
@@ -18,18 +19,27 @@ export default function WeatherSearchEngine() {
         <li>Sunny</li>
       </ul>
       <div className="row">
-        <div className="col-6">
+        <div className="col-6 temperature-container">
           <img
             src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
             alt="sunny"
+            className="mainImage"
           />
-          <h2>24ºC</h2>
+          <span className="temperature">
+            24<small>°C</small>
+          </span>
         </div>
         <div className="col-6">
           <ul>
-            <li>Precipitation: 0%</li>
-            <li>Humidity: 81%</li>
-            <li>Wind: 13km/h</li>
+            <li>
+              Precipitation: <span>0%</span>
+            </li>
+            <li>
+              Humidity: <span>81%</span>
+            </li>
+            <li>
+              Wind: <span>13km/h</span>
+            </li>
           </ul>
         </div>
       </div>

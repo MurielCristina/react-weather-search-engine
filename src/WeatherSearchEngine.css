@@ -1,8 +1,12 @@
 .WeatherSearchEngine {
-  border: 1px solid gray;
-  padding: 15px;
-  margin: 15px;
+  border: 1px solid #a6036b;
+  padding: 40px;
+  margin: 20px auto;
   max-width: 600px;
+  border-radius: 16px;
+  box-shadow: 0 30px 50px #41326414;
+  font-family: Cerebri-Sans, Helvetica, Arial, sans-serif;
+  color: #0b0913;
 }
 .WeatherSearchEngine form {
   margin-bottom: 15px;
@@ -13,4 +17,48 @@
 }
 .WeatherSearchEngine .formSubmit {
   width: 25%;
+}
+.WeatherSearchEngine h3 {
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 29px;
+  line-height: 48px;
+  margin: 20px 0 10px;
+}
+.WeatherSearchEngine ul {
+  padding-left: 0;
+}
+.WeatherSearchEngine li {
+  list-style: none;
+  color: #27214266;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+}
+.WeatherSearchEngine li span {
+  color: #fe359d;
+}
+.WeatherSearchEngine span.temperature {
+  color: #212121;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 64px;
+  margin-left: 10px;
+}
+.WeatherSearchEngine span.temperature small {
+  font-size: 20px;
+  font-weight: 500;
+  position: relative;
+  top: -25px;
+  margin-left: 5px;
+}
+.WeatherSearchEngine img.mainImage {
+  height: 64px;
+  display: inline-block;
+  margin: 10px 0;
+}
+.WeatherSearchEngine .temperature-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
