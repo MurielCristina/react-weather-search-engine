@@ -1,0 +1,16 @@
+.WeatherSearchEngine {
+  border: 1px solid gray;
+  padding: 15px;
+  margin: 15px;
+  max-width: 600px;
+}
+.WeatherSearchEngine form {
+  margin-bottom: 15px;
+}
+.WeatherSearchEngine .formSearch {
+  width: 70%;
+  margin-right: 15px;
+}
+.WeatherSearchEngine .formSubmit {
+  width: 25%;
+}
