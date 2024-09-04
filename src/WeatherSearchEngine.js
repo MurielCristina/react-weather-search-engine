@@ -20,6 +20,7 @@ export default function WeatherSearchEngine(props) {
       wind: response.data.daily[0].wind.speed,
       icon: response.data.daily[0].condition.icon,
       fullDate: new Date(response.data.daily[0].time * 1000),
+      daily: response.data.daily,
     });
   }
   function search() {
@@ -49,7 +50,7 @@ export default function WeatherSearchEngine(props) {
           data={weatherData}
           iconUrl={`http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${weatherData.icon}.png`}
         />
-        <WeatherForecast />
+        <WeatherForecast data={weatherData.daily} />
       </div>
     );
   } else {
