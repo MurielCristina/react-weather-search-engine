@@ -1,0 +1,28 @@
+.WeatherForecast {
+  text-align: center;
+  margin-top: 30px;
+}
+.WeatherForecast-day {
+  font-size: 14px;
+}
+.WeatherForecast-temp-max {
+  font-size: 14px;
+  opacity: 0.8;
+  margin-right: 3px;
+}
+.WeatherForecast-temp-min {
+  font-size: 14px;
+  opacity: 0.5;
+}
+.WeatherForecast img.secondaryImage {
+  height: 75px;
+  display: inline-block;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .WeatherForecast img.secondaryImage {
+    height: 40px;
+    margin: 2px 0;
+  }
+}

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import WeatherInfo from "./WeatherInfo";
+import WeatherForecast from "./WeatherForecast";
 
 import "./WeatherSearchEngine.css";
 
@@ -48,6 +49,7 @@ export default function WeatherSearchEngine(props) {
           data={weatherData}
           iconUrl={`http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${weatherData.icon}.png`}
         />
+        <WeatherForecast />
       </div>
     );
   } else {
