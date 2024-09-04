@@ -9,7 +9,7 @@ export default function App() {
     <div className="App">
       <div className="container">
         <Header />
-        <WeatherSearchEngine defaultCity="Castellón de la Plana" />
+        <WeatherSearchEngine defaultCity="Castellon de la plana" />
         <Footer />
       </div>
     </div>

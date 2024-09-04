@@ -1,6 +1,9 @@
 import React, { useState } from "react";
-import "./WeatherSearchEngine.css";
 import axios from "axios";
+import FormattedDate from "./FormattedDate";
+
+import "./WeatherSearchEngine.css";
+
 export default function WeatherSearchEngine(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
 
@@ -17,7 +20,7 @@ export default function WeatherSearchEngine(props) {
       wind: response.data.daily[0].wind.speed,
       iconUrl: response.data.daily[0].condition.icon_url,
       icon: response.data.daily[0].condition.icon,
-      fullDate: "Wednesday September 3, 2024",
+      fullDate: new Date(response.data.daily[0].time * 1000),
     });
   }
   if (weatherData.ready) {
@@ -36,7 +39,7 @@ export default function WeatherSearchEngine(props) {
           {weatherData.city}, {weatherData.country}
         </h3>
         <ul>
-          <li>{weatherData.fullDate}</li>
+          <FormattedDate timeStamp={weatherData.fullDate} />
           <li>{weatherData.description}</li>
         </ul>
         <div className="row">
