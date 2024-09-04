@@ -1,5 +1,7 @@
 import React from "react";
 
+import "./WeatherSearchEngine.css";
+
 export default function FormattedDate(props) {
   let days = [
     "Sunday",
@@ -11,29 +13,27 @@ export default function FormattedDate(props) {
     "Saturday",
   ];
   let months = [
-    "January",
-    "February",
+    "Jan",
+    "Feb",
     "March",
-    "April",
+    "Apr",
     "May",
     "June",
     "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December",
+    "Aug",
+    "Sept",
+    "Oct",
+    "Nov",
+    "Dec",
   ];
   let day = days[props.timeStamp.getDay()];
   let date = props.timeStamp.getDate();
   let month = months[props.timeStamp.getMonth()];
   let year = props.timeStamp.getFullYear();
-  let hours = props.timeStamp.getHours().toString().padStart(2, 0);
-  let minutes = props.timeStamp.getMinutes().toString().padStart(2, 0);
 
   return (
-    <div>
-      {hours}:{minutes} | {day} {date}, {month} {year}.
+    <div className="FormattedDate">
+      {day} {date}, {month} {year}.
     </div>
   );
 }

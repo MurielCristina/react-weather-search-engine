@@ -35,6 +35,12 @@
   font-weight: 500;
   line-height: 20px;
 }
+.FormattedDate {
+  color: #27214266;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+}
 .WeatherSearchEngine li span {
   color: #fe359d;
 }
