@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <div className="Footer">
       <p>
-        This apps was codded in React by{" "}
+        This apps was codded in React ⚛️ by{" "}
         <a
           href="https://muri-portfolio.netlify.app/"
           target="_blank"
