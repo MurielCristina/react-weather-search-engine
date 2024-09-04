@@ -1,10 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 export default function UnitConversion(props) {
   const [units, setUnits] = useState("celsius");
   const [degrees, setDegrees] = useState(
     Math.round(props.temperatureInCelsius)
   );
+
+  useEffect(() => {
+    setDegrees(Math.round(props.temperatureInCelsius));
+  }, [props.temperatureInCelsius]);
 
   function farenheit(event) {
     setUnits("farenheit");
