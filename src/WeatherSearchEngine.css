@@ -89,9 +89,13 @@
   .WeatherSearchEngine .formSearch {
     width: 70%;
     margin-right: 5px;
+    font-size: 13px;
   }
   .WeatherSearchEngine .formSubmit {
     width: 25%;
+  }
+  .pinkBtn {
+    font-size: 13px;
   }
   .WeatherSearchEngine h3 {
     font-size: 20px;
@@ -105,17 +109,17 @@
     margin-bottom: 0;
   }
   .WeatherSearchEngine span.temperature {
-    font-size: 40px;
+    font-size: 28px;
     line-height: 40px;
     margin-left: 2px;
   }
   .WeatherSearchEngine span.temperature small {
-    font-size: 16px;
+    font-size: 12px;
     position: relative;
     top: -18px;
   }
   .WeatherSearchEngine img.mainImage {
-    height: 55px;
-    margin: 5px 0;
+    height: 40px;
+    margin: 2px 0;
   }
 }
