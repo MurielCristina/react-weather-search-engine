@@ -21,10 +21,7 @@ export default function UnitConversion(props) {
         <span className="temperature">
           {degrees}
           <small>
-            °C |{" "}
-            <a href="#" onClick={farenheit}>
-              °F
-            </a>
+            °C | <span onClick={farenheit}>°F</span>
           </small>
         </span>
       </div>
@@ -35,10 +32,7 @@ export default function UnitConversion(props) {
         <span className="temperature">
           {degrees}
           <small>
-            <a href="#" onClick={celsius}>
-              °C
-            </a>{" "}
-            | °F
+            °F | <span onClick={celsius}>°C</span>
           </small>
         </span>
       </div>
