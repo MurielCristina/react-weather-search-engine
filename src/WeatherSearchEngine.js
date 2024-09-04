@@ -42,7 +42,7 @@ export default function WeatherSearchEngine(props) {
             autoFocus="on"
             onChange={(event) => setCiy(event.target.value)}
           />
-          <input type="submit" value="Search" className="formSubmit" />
+          <input type="submit" value="Search" className="formSubmit pinkBtn" />
         </form>
         <WeatherInfo
           data={weatherData}
