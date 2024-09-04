@@ -18,7 +18,6 @@ export default function WeatherSearchEngine(props) {
       description: response.data.daily[0].condition.description,
       humidity: response.data.daily[0].temperature.humidity,
       wind: response.data.daily[0].wind.speed,
-      iconUrl: response.data.daily[0].condition.icon_url,
       icon: response.data.daily[0].condition.icon,
       fullDate: new Date(response.data.daily[0].time * 1000),
     });
@@ -46,7 +45,10 @@ export default function WeatherSearchEngine(props) {
           />
           <input type="submit" value="Search" className="formSubmit" />
         </form>
-        <WeatherInfo data={weatherData} />
+        <WeatherInfo
+          data={weatherData}
+          iconUrl={`http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${weatherData.icon}.png`}
+        />
       </div>
     );
   } else {
