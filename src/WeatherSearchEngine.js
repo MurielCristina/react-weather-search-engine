@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import "./WeatherSearchEngine.css";
 import axios from "axios";
-export default function WeatherSearchEngine() {
-  const [ready, setReady] = useState(false);
-  const [weatherData, setWeatherData] = useState({});
+export default function WeatherSearchEngine(props) {
+  const [weatherData, setWeatherData] = useState({ ready: false });
 
   function handleResponse(response) {
-    setReady(true);
+    console.log(response.data.daily[0].condition.icon_url);
 
     setWeatherData({
+      ready: true,
       temperature: response.data.daily[0].temperature.day,
       city: response.data.city,
       country: response.data.country,
@@ -17,9 +17,10 @@ export default function WeatherSearchEngine() {
       wind: response.data.daily[0].wind.speed,
       iconUrl: response.data.daily[0].condition.icon_url,
       icon: response.data.daily[0].condition.icon,
+      fullDate: "Wednesday September 3, 2024",
     });
   }
-  if (ready) {
+  if (weatherData.ready) {
     return (
       <div className="WeatherSearchEngine">
         <form>
@@ -35,7 +36,7 @@ export default function WeatherSearchEngine() {
           {weatherData.city}, {weatherData.country}
         </h3>
         <ul>
-          <li>Wednesday September 3, 2024</li>
+          <li>{weatherData.fullDate}</li>
           <li>{weatherData.description}</li>
         </ul>
         <div className="row">
@@ -64,8 +65,7 @@ export default function WeatherSearchEngine() {
       </div>
     );
   } else {
-    let query = "Valencia";
-    let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${query}&key=73050fa355794447f81ab5349190dotd&units=metric`;
+    let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${props.defaultCity}&key=73050fa355794447f81ab5349190dotd&units=metric`;
     axios.get(apiUrl).then(handleResponse);
 
     return "Loading";
