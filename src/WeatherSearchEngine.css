@@ -59,9 +59,9 @@
   margin-left: 5px;
 }
 .WeatherSearchEngine img.mainImage {
-  height: 64px;
+  height: 100px;
   display: inline-block;
-  margin: 10px 0;
+  margin: 0;
 }
 .WeatherSearchEngine .temperature-container {
   display: flex;
@@ -80,15 +80,20 @@
     width: 25%;
   }
   .WeatherSearchEngine h3 {
-    font-size: 28px;
+    font-size: 20px;
     text-align: center;
   }
   .WeatherSearchEngine li {
-    font-size: 14px;
+    font-size: 12px;
+  }
+  .FormattedDate {
+    font-size: 12px;
+    margin-bottom: 0;
   }
   .WeatherSearchEngine span.temperature {
     font-size: 40px;
     line-height: 40px;
+    margin-left: 2px;
   }
   .WeatherSearchEngine span.temperature small {
     font-size: 16px;
@@ -96,6 +101,7 @@
     top: -18px;
   }
   .WeatherSearchEngine img.mainImage {
-    height: 40px;
+    height: 55px;
+    margin: 5px 0;
   }
 }
