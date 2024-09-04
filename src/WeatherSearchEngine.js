@@ -7,9 +7,8 @@ import "./WeatherSearchEngine.css";
 export default function WeatherSearchEngine(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCiy] = useState(props.defaultCity);
-  function handleResponse(response) {
-    console.log(response.data.daily[0].condition.icon_url);
 
+  function handleResponse(response) {
     setWeatherData({
       ready: true,
       temperature: response.data.daily[0].temperature.day,
