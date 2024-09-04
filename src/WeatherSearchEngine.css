@@ -68,6 +68,10 @@
   flex-direction: row;
   align-items: center;
 }
+.UnitConversion a {
+  color: #fe359d;
+  text-decoration: none;
+}
 @media (max-width: 768px) {
   .WeatherSearchEngine {
     padding: 15px;
